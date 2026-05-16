@@ -810,7 +810,7 @@ export default function Index() {
                 { img: HERO_IMG, icon: "Wheat", label: "Our Fields", desc: "Carefully managed for quality and yield" },
                 { img: FACTORY_IMG, icon: "Settings", label: "Processing", desc: "Modern equipment for cleaning and sorting" },
                 { img: PRODUCTS_IMG, icon: "Package", label: "Storage", desc: "Safe storage in our warehouses" },
-                { img: "https://cdn.poehali.dev/files/aa315ecd-ab40-456e-b4e3-27b8a8922be0.jpg", icon: "Truck", label: "Shipment", desc: "Reliable logistics to global destinations" },
+                { img: "https://ybvgdlhrldbkfqiccxxo.supabase.co/storage/v1/object/public/1/remaing.jpg", icon: "Truck", label: "Shipment", desc: "Reliable logistics to global destinations" },
               ].map((t, i) => (
                 <div key={i} className="relative aspect-square img-zoom overflow-hidden">
                   <img src={t.img} alt={t.label} className="w-full h-full object-cover" style={{ opacity: 0.7 }} />
