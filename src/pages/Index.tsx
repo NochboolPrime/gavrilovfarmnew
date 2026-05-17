@@ -3,7 +3,7 @@ import Icon from "@/components/ui/icon";
 
 // Real farm photos — Gavrilov Organic Foods
 const HERO_IMG =
-  "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg"; // buckwheat field in bloom
+  "https://cdn.poehali.dev/files/a50c2663-5204-4576-bf27-5c915a5981ae.jpg"; // buckwheat field in bloom
 const PRODUCTS_IMG =
   "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg"; // big bags in warehouse
 const FACTORY_IMG =
@@ -16,7 +16,7 @@ const REF_PRIVATE =
 const REF_PROCESS =
   "https://cdn.poehali.dev/files/6b617da2-3106-4871-b5ff-2d574abb7a34.jpg"; // sowing in field
 const REF_EXPORT =
-  "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg"; // KAMAZ truck
+  "https://cdn.poehali.dev/files/67bac509-ee17-498f-b58e-8f09c4af0a50.jpg"; // truck with big bags
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -35,6 +35,7 @@ const products = [
     organic: true,
     packaging: "25 / 50 kg bags or big bags",
     moq: "from 1 MT",
+    origin: "Smolensk Region, Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/49906ef7-211c-4d64-beae-004e3518ef74.jpg",
   },
   {
@@ -42,13 +43,15 @@ const products = [
     organic: true,
     packaging: "25 / 50 kg bags or big bags",
     moq: "from 1 MT",
-    img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/bb689ed8-ee56-4684-b396-e560a076588f.jpg",
+    origin: "Smolensk Region, Russia",
+    img: "https://cdn.poehali.dev/files/2feefebc-e7a3-4fa1-b4ae-04ae4dbecc3c.png",
   },
   {
     name: "BUCKWHEAT FLOUR",
     organic: true,
     packaging: "25 kg bags",
     moq: "from 1 MT",
+    origin: "Smolensk Region, Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/5aa6f984-f5f5-4f4e-afe2-85e236e0a871.jpg",
   },
   {
@@ -56,6 +59,7 @@ const products = [
     organic: true,
     packaging: "25 kg bags",
     moq: "from 1 MT",
+    origin: "Smolensk Region, Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/4e313381-f7ae-4934-8263-19f31994775f.jpg",
   },
   {
@@ -63,6 +67,7 @@ const products = [
     organic: true,
     packaging: "25 / 50 kg bags or big bags",
     moq: "from 1 MT",
+    origin: "Smolensk Region, Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/6221103e-8fac-42c6-acda-82f48776aa1b.jpg",
   },
   {
@@ -70,6 +75,7 @@ const products = [
     organic: false,
     packaging: "25 / 50 kg bags",
     moq: "from 1 MT",
+    origin: "Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/22e07f78-6ce7-4769-a3ff-370062a13ca2.jpg",
   },
   {
@@ -77,6 +83,7 @@ const products = [
     organic: false,
     packaging: "25 / 50 kg bags",
     moq: "from 1 MT",
+    origin: "Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/98344303-4a85-427d-9dca-54dc796d32cd.jpg",
   },
   {
@@ -84,6 +91,7 @@ const products = [
     organic: false,
     packaging: "25 / 50 kg bags",
     moq: "from 1 MT",
+    origin: "Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/99258109-655c-4c20-a367-ff9baefaa524.jpg",
   },
   {
@@ -91,6 +99,7 @@ const products = [
     organic: false,
     packaging: "25 / 50 kg bags",
     moq: "from 1 MT",
+    origin: "Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/0f6296ad-99b5-4123-9acc-3349c6210930.jpg",
   },
   {
@@ -98,6 +107,7 @@ const products = [
     organic: false,
     packaging: "25 / 50 kg bags or big bags",
     moq: "from 1 MT",
+    origin: "Russia",
     img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/d8ce42e3-3088-4de2-83f1-662af34b4f05.jpg",
   },
 ];
@@ -106,7 +116,7 @@ const processSteps = [
   {
     num: "01",
     title: "Own Farmland",
-    desc: "10,000 ha of fertile fields. Full control from seed to harvest.",
+    desc: "10,000 + ha of fertile fields. Full control from seed to harvest.",
   },
   {
     num: "02",
@@ -178,9 +188,9 @@ const privateLabel = [
   },
   {
     icon: "Container",
-    title: "FCL Container Supply",
+    title: "Container Shipments",
     size: "20ft / 40ft",
-    desc: "Full container shipments for safe and efficient delivery.",
+    desc: "Full container loading (FCL) for safe and efficient global delivery.",
   },
   {
     icon: "Tag",
@@ -212,7 +222,7 @@ const galleryImages = [
     label: "Processing",
   },
   {
-    src: "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg",
+    src: "https://cdn.poehali.dev/files/67bac509-ee17-498f-b58e-8f09c4af0a50.jpg",
     label: "Export",
   },
   {
@@ -400,8 +410,8 @@ export default function Index() {
           }}
         >
           <img
-            src="https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/6341fdb7-7079-43b0-b75c-5c9825af902a.jpg"
-            alt="Gavrilov Foods grain silos"
+            src="https://cdn.poehali.dev/files/f6ccade7-e37d-408f-825a-a483aa548a17.jpg"
+            alt="Gavrilov Foods buckwheat field"
             style={{
               position: "absolute",
               inset: 0,
@@ -593,7 +603,9 @@ export default function Index() {
                       .querySelector("#contact")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                >Request a Quote</button>
+                >
+                  Request a Quote
+                </button>
               </div>
             </div>
           </div>
@@ -666,7 +678,7 @@ export default function Index() {
 
               {/* 4 stats */}
               {[
-                { icon: "Tractor", val: "10,000+ ha", label: "Farmland" },
+                { icon: "Tractor", val: "10,000 ha", label: "Farmland" },
                 {
                   icon: "Warehouse",
                   val: "10,000 – 15,000 MT",
@@ -1236,8 +1248,8 @@ export default function Index() {
                   }}
                 />
                 <img
-                  src="https://cdn.poehali.dev/files/4c755ac3-62a0-4ed1-b83b-e53189373f3f.jpg"
-                  alt="Kirovets tractor"
+                  src="https://cdn.poehali.dev/files/f086c655-d4e2-4ed8-a064-71baf53ae9a9.jpg"
+                  alt="Warehouse bags storage"
                   className="w-full h-full object-cover"
                   style={{
                     borderBottomLeftRadius: 16,
@@ -1256,8 +1268,8 @@ export default function Index() {
         style={{ background: "var(--gf-cream)" }}
       >
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2">
-            {/* Left content */}
+          <div>
+            {/* Content */}
             <div className="py-16 px-6 lg:px-12 reveal-left">
               <div
                 className="text-[10px] font-bold uppercase tracking-widest mb-4 font-montserrat"
@@ -1272,40 +1284,40 @@ export default function Index() {
                   color: "var(--gf-dark)",
                 }}
               >
-                From field
-                <br />
-                to your warehouse
+                From Farm to Global Delivery
               </h2>
               <p
-                className="text-[14px] leading-relaxed mb-10 max-w-sm font-montserrat"
+                className="text-[14px] leading-relaxed mb-10 max-w-2xl font-montserrat"
                 style={{ color: "var(--gf-text-light)" }}
               >
-                We control every step of the supply chain to ensure quality,
-                traceability and on-time delivery.
+                From certified farmland to container loading — we own every
+                stage: cultivation on 10,000+ ha, post-harvest storage up to
+                10,000 MT, in-house processing, and certified export logistics
+                worldwide.
               </p>
 
               {/* 4 features */}
-              <div className="grid grid-cols-2 gap-8 mb-10">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
                 {[
                   {
                     icon: "Warehouse",
-                    title: "Own Storage",
-                    desc: "Modern elevators and warehouses with capacity for safe storage.",
+                    title: "10,000 MT Storage",
+                    desc: "Temperature-controlled grain facilities with ventilation and quality monitoring.",
                   },
                   {
                     icon: "Factory",
-                    title: "Processing",
-                    desc: "Advanced equipment for cleaning, sorting and processing grains and pulses.",
+                    title: "In-House Processing",
+                    desc: "Multi-stage cleaning, de-hulling and optical sorting to EU/USDA specs.",
                   },
                   {
-                    icon: "ShieldCheck",
-                    title: "Quality Control",
-                    desc: "In-house lab testing at every stage to meet international standards.",
+                    icon: "ScanLine",
+                    title: "Full Traceability",
+                    desc: "Field-to-shipment documentation, lab testing and phytosanitary certification.",
                   },
                   {
-                    icon: "Truck",
-                    title: "Reliable Logistics",
-                    desc: "Experienced team and trusted partners for worldwide delivery.",
+                    icon: "Container",
+                    title: "Container Logistics",
+                    desc: "20/40 ft refrigerated and dry containers. FOB, CFR, DDP terms available.",
                   },
                 ].map((f, i) => (
                   <div
@@ -1341,25 +1353,10 @@ export default function Index() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Work With Us <Icon name="ArrowRight" size={16} />
+                REQUEST A QUOTE
               </button>
             </div>
 
-            {/* Right: full-bleed truck image */}
-            <div className="relative reveal-right" style={{ minHeight: 420 }}>
-              <img
-                src="https://cdn.poehali.dev/files/28640fc0-8124-4c4f-94ca-37bdb050f058.jpg"
-                alt="John Deere tractor in field"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "linear-gradient(to right, var(--gf-cream) 0%, transparent 30%)",
-                }}
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -1529,18 +1526,33 @@ export default function Index() {
                     className="mt-3 pt-2.5"
                     style={{ borderTop: "1px solid rgba(0,0,0,0.06)" }}
                   >
-                    <span
-                      className="text-[11px] font-montserrat"
-                      style={{ color: "var(--gf-text-light)" }}
-                    >
-                      MOQ{" "}
-                    </span>
-                    <span
-                      className="text-[12px] font-bold font-montserrat"
-                      style={{ color: "var(--gf-gold)" }}
-                    >
-                      {p.moq}
-                    </span>
+                    <div className="mb-1.5">
+                      <span
+                        className="text-[11px] font-montserrat"
+                        style={{ color: "var(--gf-text-light)" }}
+                      >
+                        MOQ{" "}
+                      </span>
+                      <span
+                        className="text-[12px] font-bold font-montserrat"
+                        style={{ color: "var(--gf-gold)" }}
+                      >
+                        {p.moq}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Icon
+                        name="MapPin"
+                        size={10}
+                        style={{ color: "var(--gf-text-light)", flexShrink: 0 }}
+                      />
+                      <span
+                        className="text-[10px] font-montserrat"
+                        style={{ color: "var(--gf-text-light)" }}
+                      >
+                        {p.origin}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1635,7 +1647,7 @@ export default function Index() {
                     color: "var(--gf-dark)",
                   }}
                 >
-                  Full control of the supply chain
+                  From Farm to Export — Full Supply Chain Control
                 </h3>
                 <p
                   className="text-[13px] leading-relaxed mb-6"
@@ -1657,7 +1669,7 @@ export default function Index() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Learn More About Us <Icon name="ArrowRight" size={15} />
+                REQUEST A QUOTE
               </button>
             </div>
 
@@ -1677,16 +1689,16 @@ export default function Index() {
                   desc: "Modern equipment for cleaning and sorting",
                 },
                 {
-                  img: PRODUCTS_IMG,
+                  img: "https://cdn.poehali.dev/files/fa420cdb-c1a0-490e-a2ea-6b3197b248b7.jpg",
                   icon: "Package",
                   label: "Storage",
-                  desc: "Safe storage in our warehouses",
+                  desc: "Controlled storage capacity for stable supply",
                 },
                 {
                   img: "https://ybvgdlhrldbkfqiccxxo.supabase.co/storage/v1/object/public/1/remaing.jpg",
                   icon: "Truck",
                   label: "Shipment",
-                  desc: "Reliable logistics to global destinations",
+                  desc: "Export logistics & container shipments worldwide",
                 },
               ].map((t, i) => (
                 <div
@@ -1775,8 +1787,7 @@ export default function Index() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                <Icon name="Download" size={16} />
-                Download Catalog PDF
+                GET PRODUCT CATALOG
               </button>
               <span
                 className="text-[10px] font-montserrat"
@@ -1825,7 +1836,7 @@ export default function Index() {
                     className="text-[10px] font-bold uppercase tracking-widest mb-4 font-montserrat"
                     style={{ color: "var(--gf-gold)" }}
                   >
-                    Organic & Conventional
+                    EU Organic Certified Supplier
                   </div>
                   <h2
                     className="font-cormorant font-semibold text-white leading-tight mb-4"
@@ -1835,7 +1846,7 @@ export default function Index() {
                     <span
                       style={{ color: "var(--gf-gold)", fontStyle: "italic" }}
                     >
-                      Conventional Options
+                      Conventional Supply
                     </span>
                   </h2>
                   <div
@@ -1843,7 +1854,10 @@ export default function Index() {
                     style={{ background: "var(--gf-gold)" }}
                   />
                   <p className="text-white/65 text-[14px] leading-relaxed max-w-xs font-montserrat">
-                    We meet your needs with flexibility and care at every step.
+                    EU-certified organic and conventional product lines — grown
+                    on our own farmland in the Smolensk Region, processed
+                    in-house, and shipped wholesale to importers and
+                    distributors worldwide.
                   </p>
                 </div>
 
@@ -1861,8 +1875,8 @@ export default function Index() {
                     style={{ color: "var(--gf-gold)", flexShrink: 0 }}
                   />
                   <p className="text-white/75 text-[13px] leading-snug font-montserrat">
-                    Organic & Conventional options available —<br />
-                    we meet your needs with flexibility and care.
+                    Wholesale supply with export documentation —<br />
+                    organic &amp; conventional, FOB / DDP terms available.
                   </p>
                 </div>
               </div>
@@ -1902,10 +1916,7 @@ export default function Index() {
                   fontWeight: 400,
                 }}
               >
-                Healthy products —<br />
-                <span style={{ fontStyle: "italic", fontWeight: 400 }}>
-                  healthy planet
-                </span>
+                EU Certified Organic Products
               </h2>
 
               {/* Checkmarks */}
@@ -2012,7 +2023,7 @@ export default function Index() {
                 {
                   name: "GREEN BUCKWHEAT",
                   packaging: "25 kg / 50 kg / Big Bag",
-                  img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/bb689ed8-ee56-4684-b396-e560a076588f.jpg",
+                  img: "https://cdn.poehali.dev/files/72e6e07c-de60-4be9-8cd7-78cfed2c6de0.png",
                 },
                 {
                   name: "BUCKWHEAT FLOUR",
@@ -2113,8 +2124,10 @@ export default function Index() {
                     className="text-[12px] leading-relaxed font-montserrat mb-4"
                     style={{ color: "var(--gf-text-light)" }}
                   >
-                    We also supply a wide range of conventional grains, pulses
-                    and oilseeds. Consistent quality. Reliable supply.
+                    Stable export volumes of conventional grains, pulses and
+                    oilseeds. Standard packaging 25–50 kg bags and big bags.
+                    Export documentation, phytosanitary certificates, and
+                    FOB/DDP terms on request.
                   </p>
                 </div>
                 <button
@@ -2152,7 +2165,7 @@ export default function Index() {
                       textTransform: "uppercase",
                     }}
                   >
-                    From Field to Your Table
+                    FULL SUPPLY CHAIN CONTROL
                   </span>
                 </div>
                 <p
@@ -2174,12 +2187,12 @@ export default function Index() {
                 {[
                   {
                     icon: "Sun",
-                    title: "10,000 ha",
+                    title: "10,000 + ha",
                     desc: "own farmland full control",
                   },
                   {
                     icon: "Tractor",
-                    title: "Carefully",
+                    title: "Direct Farming",
                     desc: "cultivated and harvested",
                   },
                   {
@@ -2195,7 +2208,7 @@ export default function Index() {
                   {
                     icon: "Ship",
                     title: "Reliable",
-                    desc: "logistics to global markets",
+                    desc: "export logistics & container shipments",
                   },
                 ].map((f, i) => (
                   <div
@@ -2234,7 +2247,7 @@ export default function Index() {
                 >
                   {[
                     {
-                      img: "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg",
+                      img: "https://cdn.poehali.dev/files/4b9c64c5-d74c-4850-9a9b-8aac0bae6ef5.jpg",
                       label: "FARMLAND",
                     },
                     {
@@ -2325,7 +2338,7 @@ export default function Index() {
                   className="font-cormorant font-semibold text-xl mb-0.5"
                   style={{ color: "var(--gf-dark)" }}
                 >
-                  Download Organic Certificate / Specification
+                  Documents
                 </div>
                 <div
                   className="text-[12px] font-montserrat"
@@ -2336,7 +2349,7 @@ export default function Index() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-4 flex-shrink-0">
+            <div className="flex items-center gap-4 flex-shrink-0 flex-wrap">
               <a
                 href="/docs/organic-cert.pdf"
                 download
@@ -2349,7 +2362,21 @@ export default function Index() {
                 }}
               >
                 <Icon name="Download" size={16} />
-                Download Documents
+                Organic Certificate
+              </a>
+              <a
+                href="/docs/product-specification.pdf"
+                download
+                className="btn-gold"
+                style={{
+                  textDecoration: "none",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                }}
+              >
+                <Icon name="Download" size={16} />
+                Product Specification
               </a>
               <img
                 src={PRODUCTS_IMG}
@@ -2379,7 +2406,7 @@ export default function Index() {
               className="absolute inset-0"
               style={{
                 background:
-                  "linear-gradient(to right, rgba(14,26,15,0.96) 0%, rgba(14,26,15,0.7) 55%, transparent 100%)",
+                  "linear-gradient(to right, rgba(14,26,15,0.98) 0%, rgba(14,26,15,0.88) 55%, rgba(14,26,15,0.55) 100%)",
               }}
             />
             <div className="relative z-10 p-10 md:p-14 max-w-2xl">
@@ -2394,7 +2421,7 @@ export default function Index() {
                     textTransform: "uppercase",
                   }}
                 >
-                  Our Process
+                  FULL SUPPLY CHAIN
                 </span>
                 <Icon
                   name="Leaf"
@@ -2414,31 +2441,32 @@ export default function Index() {
                 TO EXPORT
               </h2>
               <p className="text-white/60 text-[14px] leading-relaxed mb-8 max-w-sm font-montserrat">
-                We control every stage of production to ensure consistent
-                quality, traceability and reliability for our partners.
+                From seed to container — we manage the full cycle in-house:
+                cultivation, post-harvest storage, processing, packaging, and
+                certified export to international markets.
               </p>
               {/* 4 pillars */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
                   {
-                    icon: "Leaf",
-                    title: "Organic Fields",
-                    desc: "Fertile land and careful cultivation",
+                    icon: "Sprout",
+                    title: "Advanced Cultivation",
+                    desc: "Precision farming, soil monitoring, and sustainable crop management",
                   },
                   {
-                    icon: "ShieldCheck",
-                    title: "Quality Control",
-                    desc: "Field inspections and strict standards",
+                    icon: "FileCheck",
+                    title: "Export Compliance",
+                    desc: "Phytosanitary certification, pesticide testing, and market-specific documentation",
                   },
                   {
-                    icon: "Settings",
-                    title: "Modern Equipment",
-                    desc: "Advanced machinery and technologies",
+                    icon: "Package",
+                    title: "Processing & Packaging",
+                    desc: "Sorting, cleaning, and retail-ready packing to extend shelf life",
                   },
                   {
-                    icon: "Globe",
-                    title: "Global Supply",
-                    desc: "Reliable logistics and on-time delivery",
+                    icon: "Container",
+                    title: "Container Shipments",
+                    desc: "Refrigerated container logistics, route planning, and on-time delivery",
                   },
                 ].map((p, i) => (
                   <div key={i}>
@@ -2454,7 +2482,7 @@ export default function Index() {
                     <div className="font-montserrat font-bold text-[10px] uppercase tracking-widest text-white mb-1">
                       {p.title}
                     </div>
-                    <div className="text-white/45 text-[11px] font-montserrat leading-snug">
+                    <div className="text-white/70 text-[11px] font-montserrat leading-snug">
                       {p.desc}
                     </div>
                   </div>
@@ -2618,33 +2646,33 @@ export default function Index() {
               {[
                 {
                   num: "01",
-                  title: "Farming",
-                  desc: "Cultivation of healthy and strong crops on fertile fields.",
+                  title: "Field",
+                  desc: "Precision field management with soil monitoring and crop rotation across our own land.",
                 },
                 {
                   num: "02",
                   title: "Harvesting",
-                  desc: "Timely harvesting with modern agricultural machinery.",
+                  desc: "Timely harvest using GPS-guided combine machinery to minimise field losses.",
                 },
                 {
                   num: "03",
                   title: "Processing",
-                  desc: "Cleaning, sorting and quality control.",
+                  desc: "Multi-stage cleaning, de-hulling, and optical sorting to meet EU/USDA specs.",
                 },
                 {
                   num: "04",
                   title: "Storage",
-                  desc: "Safe storage in clean and well-maintained facilities.",
+                  desc: "Up to 10,000 MT capacity in temperature-controlled, ventilated grain facilities.",
                 },
                 {
                   num: "05",
                   title: "Packaging",
-                  desc: "Flexible packaging solutions for different market needs.",
+                  desc: "Retail 200g–1kg, industrial 25–50 kg bags, and big bags up to 1,000 kg.",
                 },
                 {
                   num: "06",
                   title: "Export",
-                  desc: "Reliable logistics and global supply.",
+                  desc: "Full phytosanitary docs, refrigerated container loading, and DDP/FOB terms.",
                 },
               ].map((s, i) => (
                 <div key={i} className="flex flex-col">
@@ -2680,98 +2708,214 @@ export default function Index() {
             </div>
           </div>
 
-          {/* ── 3 bottom cards ── */}
-          <div className="grid md:grid-cols-3 gap-5">
-            {[
-              {
-                img: "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg", // packaging machine
-                title: "Advanced Packaging",
-                desc: "Modern equipment allows us to pack products from 200 g to 1000 g with high accuracy and product protection.",
-                btn: "Learn More",
-                target: "#products",
-              },
-              {
-                img: "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg", // packaged goods
-                title: "Flexible Solutions",
-                desc: "We offer a wide range of packaging formats and private label options to support your brand.",
-                btn: "Learn More",
-                target: "#private-label",
-              },
-              {
-                img: "https://cdn.poehali.dev/files/91652dc2-54a9-47e7-8b5f-fb8ec843b284.jpg", // big bags storage
-                title: "Large Volumes",
-                desc: "Our storage facilities and strong production capacity ensure stable supply and consistent quality.",
-                btn: "Contact Us",
-                target: "#contact",
-              },
-            ].map((c, i) => (
-              <div
-                key={i}
-                className="reveal"
-                data-delay={String(i * 80)}
-                style={{
-                  background: "var(--gf-cream)",
-                  borderRadius: 10,
-                  border: "1px solid rgba(0,0,0,0.06)",
-                  overflow: "hidden",
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                {/* Fixed-height image, no absolute positioning */}
-                <div style={{ height: 220, overflow: "hidden", flexShrink: 0 }}>
-                  <img
-                    src={c.img}
-                    alt={c.title}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      display: "block",
-                      transition: "transform 0.6s ease",
-                    }}
-                    onMouseEnter={(e) =>
-                      (e.currentTarget.style.transform = "scale(1.05)")
-                    }
-                    onMouseLeave={(e) =>
-                      (e.currentTarget.style.transform = "scale(1)")
-                    }
-                  />
-                </div>
+          {/* ── Quality Packaging hero block ── */}
+          <div
+            className="reveal mb-6"
+            style={{
+              background: "#fff",
+              border: "1px solid rgba(0,0,0,0.07)",
+              borderRadius: 10,
+              overflow: "hidden",
+            }}
+          >
+            <div className="grid md:grid-cols-2">
+              {/* Left: text */}
+              <div style={{ padding: "36px 36px 36px" }}>
                 <div
-                  style={{
-                    padding: "20px",
-                    display: "flex",
-                    flexDirection: "column",
-                    flex: 1,
-                  }}
+                  className="flex items-center gap-2 mb-4"
+                  style={{ color: "var(--gf-gold)" }}
                 >
-                  <div
-                    className="font-montserrat font-bold text-[12px] uppercase tracking-widest mb-2"
-                    style={{ color: "var(--gf-dark)" }}
-                  >
-                    {c.title}
-                  </div>
-                  <p
-                    className="text-[12px] leading-relaxed font-montserrat mb-5"
-                    style={{ color: "var(--gf-text-light)", flex: 1 }}
-                  >
-                    {c.desc}
-                  </p>
-                  <button
-                    className="btn-outline-dark text-[11px] py-2.5 px-5"
-                    style={{ alignSelf: "flex-start" }}
-                    onClick={() =>
-                      document
-                        .querySelector(c.target)
-                        ?.scrollIntoView({ behavior: "smooth" })
-                    }
-                  >
-                    {c.btn}
-                  </button>
+                  <Icon name="Package" size={14} />
+                  <span className="font-montserrat font-bold text-[10px] uppercase tracking-widest">
+                    Packaging Solutions
+                  </span>
+                </div>
+                <h3
+                  className="font-cormorant leading-tight mb-4"
+                  style={{ fontSize: "clamp(28px, 3vw, 44px)", fontWeight: 400, color: "var(--gf-dark)" }}
+                >
+                  Quality Packaging.<br />Product Protection.
+                </h3>
+                <p className="font-montserrat text-[13px] leading-relaxed mb-6" style={{ color: "var(--gf-text-light)", maxWidth: 360 }}>
+                  We use modern equipment and high-quality materials to ensure safe packaging, accurate weight and long shelf life.
+                </p>
+                <div className="flex flex-wrap gap-4 mb-8">
+                  {[
+                    { icon: "Target", label: "High Accuracy" },
+                    { icon: "Shield", label: "Product Protection" },
+                    { icon: "ShieldCheck", label: "Quality Control" },
+                  ].map((f, i) => (
+                    <div key={i} className="flex items-center gap-2">
+                      <Icon name={f.icon} size={14} style={{ color: "var(--gf-gold)" }} />
+                      <span className="font-montserrat text-[11px] font-bold uppercase tracking-wide" style={{ color: "var(--gf-dark)" }}>{f.label}</span>
+                    </div>
+                  ))}
+                </div>
+                <button
+                  className="btn-gold text-[11px]"
+                  onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Request Packaging Options <Icon name="ArrowRight" size={14} />
+                </button>
+                <div className="mt-6 pt-5" style={{ borderTop: "1px solid rgba(0,0,0,0.06)" }}>
+                  <div className="font-montserrat font-bold text-[10px] uppercase tracking-widest mb-1" style={{ color: "var(--gf-text-light)" }}>Packaging Range</div>
+                  <div className="font-cormorant text-[28px]" style={{ color: "var(--gf-gold)", fontWeight: 600 }}>200 g – 1,000 kg</div>
+                  <div className="font-montserrat text-[11px]" style={{ color: "var(--gf-text-light)" }}>Retail, wholesale and food service</div>
                 </div>
               </div>
-            ))}
+              {/* Right: photo */}
+              <div style={{ minHeight: 340, overflow: "hidden" }}>
+                <img
+                  src="https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg"
+                  alt="Packaging equipment"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* ── Packaging Formats ── */}
+          <div
+            className="reveal mb-6"
+            style={{
+              background: "#fff",
+              border: "1px solid rgba(0,0,0,0.07)",
+              borderRadius: 10,
+              padding: "32px 28px",
+            }}
+          >
+            <div className="text-center mb-6">
+              <div className="flex items-center justify-center gap-4 mb-2">
+                <span style={{ display: "block", width: 36, height: 1, background: "var(--gf-gold)" }} />
+                <span className="font-montserrat font-bold text-[11px] uppercase tracking-widest" style={{ color: "var(--gf-gold)" }}>Packaging Formats</span>
+                <span style={{ display: "block", width: 36, height: 1, background: "var(--gf-gold)" }} />
+              </div>
+              <p className="font-montserrat text-[12px]" style={{ color: "var(--gf-text-light)" }}>A wide range of packaging options to meet your market needs.</p>
+            </div>
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
+              {[
+                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/a84c41be-89d6-477d-bb1c-eccf7eb3ca68.jpg", label: "200 g", sub: "Doypack / Bag" },
+                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/a8ba908b-29b3-4909-a311-6f9d5b6f741d.jpg", label: "400 g", sub: "Doypack" },
+                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/ba5c8c80-9471-40fc-988a-9cc1602e35e0.jpg", label: "500 g", sub: "Block bottom bag" },
+                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/2eede8e6-7448-4a13-b590-b41f6117a889.jpg", label: "800 g", sub: "Gusseted bag" },
+                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/2c1a3bda-5c0e-4e53-a1de-3cac86529f89.jpg", label: "1,000 g", sub: "Block bottom bag" },
+                { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/4e6eddb4-c469-4776-90e3-d1e1129c099c.jpg", label: "Big Bags", sub: "500 – 1,000 kg" },
+              ].map((f, i) => (
+                <div key={i} className="flex flex-col items-center text-center gap-2 pb-3 px-2 pt-2" style={{ background: "var(--gf-cream)", borderRadius: 8 }}>
+                  <div style={{ height: 100, width: "100%", overflow: "hidden", borderRadius: 6 }}>
+                    <img src={f.img} alt={f.label} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  </div>
+                  <div className="font-cormorant font-semibold text-[18px]" style={{ color: "var(--gf-gold)" }}>{f.label}</div>
+                  <div className="font-montserrat text-[10px]" style={{ color: "var(--gf-text-light)" }}>{f.sub}</div>
+                </div>
+              ))}
+            </div>
+            <p className="text-center font-montserrat text-[11px] mt-4" style={{ color: "var(--gf-text-light)" }}>
+              <Icon name="Leaf" size={11} style={{ color: "var(--gf-gold)", display: "inline", marginRight: 4 }} />
+              Other weights and formats are available upon request.
+            </p>
+          </div>
+
+          {/* ── Private Label ── */}
+          <div
+            className="reveal mb-6"
+            style={{
+              background: "var(--gf-dark)",
+              borderRadius: 10,
+              overflow: "hidden",
+            }}
+          >
+            <div className="grid md:grid-cols-2 gap-0">
+              {/* Left */}
+              <div style={{ padding: "36px 36px" }}>
+                <div className="font-montserrat font-bold text-[10px] uppercase tracking-widest mb-3" style={{ color: "var(--gf-gold)" }}>Private Label</div>
+                <h3 className="font-cormorant text-white leading-tight mb-4" style={{ fontSize: "clamp(28px, 3vw, 42px)", fontWeight: 400 }}>
+                  Build Your Brand<br />
+                  <span style={{ color: "var(--gf-gold)", fontStyle: "italic" }}>With Us</span>
+                </h3>
+                <p className="font-montserrat text-[13px] leading-relaxed mb-6" style={{ color: "rgba(255,255,255,0.6)", maxWidth: 360 }}>
+                  We offer private label solutions with flexible design options to help your brand stand out.
+                </p>
+                <div className="space-y-3 mb-8">
+                  {[
+                    "Custom label design",
+                    "Different packaging materials",
+                    "Logo, colours and product information",
+                    "MOQ from 1 pallet",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <Icon name="Check" size={12} style={{ color: "var(--gf-gold)", flexShrink: 0 }} />
+                      <span className="font-montserrat text-[12px]" style={{ color: "rgba(255,255,255,0.7)" }}>{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <button
+                  className="btn-gold text-[11px]"
+                  onClick={() => document.querySelector("#private-label")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Learn More <Icon name="ArrowRight" size={14} />
+                </button>
+              </div>
+              {/* Right: mock bags with logo */}
+              <div
+                className="flex items-end justify-center gap-4 py-10 px-8"
+                style={{ background: "rgba(255,255,255,0.04)" }}
+              >
+                {[
+                  { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/de6c1f7c-3135-4231-83fa-3da2076641e3.jpg", height: 170, opacity: 0.75 },
+                  { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/89914c63-13fb-4318-9106-820bfc590cf1.jpg", height: 210, opacity: 1 },
+                  { img: "https://cdn.poehali.dev/projects/bed04f59-906c-4fa3-a533-f927837f2657/files/d44f8721-c347-4447-83b4-9db4db694851.jpg", height: 155, opacity: 0.7 },
+                ].map((b, i) => (
+                  <div
+                    key={i}
+                    style={{ width: 110, height: b.height, opacity: b.opacity, borderRadius: 8, overflow: "hidden", position: "relative", flexShrink: 0 }}
+                  >
+                    <img
+                      src={b.img}
+                      alt="Gavrilov packaging"
+                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                    />
+                    {/* Logo overlay */}
+                    <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", background: "rgba(255,255,255,0.15)" }}>
+                      <img
+                        src="https://cdn.poehali.dev/files/a56e28f6-f68e-47b5-85b3-96e8100cf00e.png"
+                        alt="Gavrilov Organic Foods"
+                        style={{ width: 72, objectFit: "contain" }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* ── Why Partners Choose Us ── */}
+          <div
+            className="reveal"
+            style={{
+              background: "#fff",
+              border: "1px solid rgba(0,0,0,0.07)",
+              borderRadius: 10,
+              padding: "24px 28px",
+            }}
+          >
+            <div className="text-center mb-5">
+              <span className="font-montserrat font-bold text-[11px] uppercase tracking-widest" style={{ color: "var(--gf-text-light)" }}>Why Partners Choose Us</span>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+              {[
+                { icon: "Leaf", label: "Organic Certified" },
+                { icon: "Truck", label: "Reliable Supply" },
+                { icon: "Package", label: "Flexible Packaging" },
+                { icon: "Globe", label: "Global Delivery" },
+                { icon: "Headphones", label: "Dedicated Support" },
+              ].map((w, i) => (
+                <div key={i} className="flex flex-col items-center gap-2">
+                  <Icon name={w.icon} size={26} style={{ color: "var(--gf-dark)", strokeWidth: 1.1 }} />
+                  <span className="font-montserrat font-bold text-[10px] uppercase tracking-wide" style={{ color: "var(--gf-dark)" }}>{w.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* ── Bottom trust bar ── */}
@@ -2780,10 +2924,11 @@ export default function Index() {
             style={{ background: "var(--gf-dark)", borderRadius: 10 }}
           >
             {[
-              { icon: "Leaf", label: "100% Organic Certified" },
-              { icon: "FlaskConical", label: "Lab Tested Quality" },
-              { icon: "ShieldCheck", label: "Food Safety Standards" },
-              { icon: "Truck", label: "On-Time Delivery" },
+              { icon: "Leaf", label: "Organic & Conventional Supply" },
+              { icon: "ShieldCheck", label: "EU Organic Certified" },
+              { icon: "FileText", label: "Export Documentation Support" },
+              { icon: "Globe", label: "Reliable Global Delivery" },
+              { icon: "ClipboardList", label: "USDA Organic in Process" },
             ].map((b, i) => (
               <div key={i} className="flex items-center gap-2.5">
                 <Icon
@@ -2928,7 +3073,7 @@ export default function Index() {
                     "EU Organic Certified",
                     "Traceable from field to final product",
                     "Sustainable farming practices",
-                    "Available for selected products only",
+                    "Available within our certified product range",
                   ].map((item, i) => (
                     <div
                       key={i}
@@ -3136,6 +3281,85 @@ export default function Index() {
             </div>
           </div>
 
+          {/* ── USDA Coming Soon ── */}
+          <div
+            className="reveal mb-4"
+            style={{
+              background: "#fff",
+              border: "1px solid rgba(0,0,0,0.08)",
+              borderRadius: 10,
+              overflow: "hidden",
+              padding: "24px 28px",
+              display: "flex",
+              alignItems: "center",
+              gap: 24,
+            }}
+          >
+            <img
+              src="https://cdn.poehali.dev/files/138b276f-d17d-42ca-ac90-e76889009b9a.png"
+              alt="USDA Organic"
+              style={{
+                width: 72,
+                height: 72,
+                objectFit: "contain",
+                flexShrink: 0,
+                opacity: 0.55,
+              }}
+            />
+            <div style={{ flex: 1 }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 10,
+                  marginBottom: 6,
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: "Montserrat",
+                    fontWeight: 700,
+                    fontSize: 13,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.06em",
+                    color: "var(--gf-dark)",
+                  }}
+                >
+                  USDA Organic / NOP Certification
+                </div>
+                <span
+                  style={{
+                    fontFamily: "Montserrat",
+                    fontSize: 10,
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    color: "#b07d2a",
+                    background: "rgba(176,125,42,0.10)",
+                    border: "1px solid rgba(176,125,42,0.25)",
+                    borderRadius: 4,
+                    padding: "2px 8px",
+                  }}
+                >
+                  Expected July 2026
+                </span>
+              </div>
+              <div
+                style={{
+                  fontFamily: "Montserrat",
+                  fontSize: 12,
+                  color: "var(--gf-text-light)",
+                  lineHeight: 1.6,
+                  maxWidth: 560,
+                }}
+              >
+                We are currently completing the USDA NOP certification process.
+                Certification is expected by July 2026, enabling us to supply
+                USDA Organic–labelled products to the US market.
+              </div>
+            </div>
+          </div>
+
           {/* ── From Field to Your Business ── */}
           <div className="reveal">
             <div className="flex items-center justify-center gap-4 mb-5">
@@ -3188,12 +3412,12 @@ export default function Index() {
                   label: "Quality packaging & labeling",
                 },
                 {
-                  img: "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg",
+                  img: "https://cdn.poehali.dev/files/0f193f1f-14c9-4f20-a6fb-9416edc6ee23.jpg",
                   num: 4,
                   label: "Reliable logistics & delivery",
                 },
                 {
-                  img: "https://cdn.poehali.dev/files/74b2aea6-bad4-4065-98fb-2a8f79de5cfd.jpg",
+                  img: "https://cdn.poehali.dev/files/0f193f1f-14c9-4f20-a6fb-9416edc6ee23.jpg",
                   num: 5,
                   label: "Export-ready shipments",
                 },
@@ -3332,9 +3556,9 @@ export default function Index() {
                   className="font-montserrat text-[14px] leading-relaxed mb-7"
                   style={{ color: "var(--gf-text-light)" }}
                 >
-                  From concept to shelf-ready packaging — we produce premium
-                  grain products under your brand for retailers, distributors
-                  and private importers worldwide.
+                  Private label production for retailers, distributors and
+                  importers worldwide — from product selection and packaging
+                  design to certified, shelf-ready delivery.
                 </p>
 
                 {/* 5 features */}
@@ -3407,11 +3631,11 @@ export default function Index() {
                   desc: "Industrial bulk packaging for large volume supply.",
                 },
                 {
-                  img: "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", // KAMAZ truck
+                  img: "https://cdn.poehali.dev/files/6ebe549e-c65d-458a-9a25-7388c52a2e06.jpg", // container loading
                   icon: "Container",
-                  title: "FCL Container Supply",
+                  title: "Container Shipments",
                   size: "20 ft / 40 ft",
-                  desc: "Full container shipments for safe and efficient delivery.",
+                  desc: "Full container loading (FCL) for safe and efficient global delivery.",
                 },
                 {
                   img: "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg", // packed goods on pallets
@@ -3668,120 +3892,120 @@ export default function Index() {
             </div>
           </div>
 
-          {/* ── Row 3: Reliable Partner dark block + 4 photos ── */}
-          <div
-            className="grid md:grid-cols-5 gap-0 mt-8 reveal"
-            style={{ borderRadius: 10, overflow: "hidden" }}
-          >
-            {/* Dark left */}
-            <div
-              style={{
-                background: "var(--gf-dark)",
-                padding: "32px 28px",
-                gridColumn: "span 1",
-              }}
-            >
+          {/* ── Row 3: Why Trust Us — 2×2 cards ── */}
+          <div className="mt-8 reveal">
+            <div className="text-center mb-6">
               <h3
-                className="font-cormorant text-white leading-tight mb-6"
+                className="font-cormorant"
                 style={{
-                  fontSize: "clamp(22px, 2.5vw, 30px)",
+                  fontSize: "clamp(24px, 3vw, 36px)",
                   fontWeight: 400,
+                  color: "var(--gf-dark)",
                 }}
               >
-                Reliable Partner for Your Brand
+                Why Importers Trust Gavrilov Foods
               </h3>
-              <div className="space-y-5">
-                {[
-                  {
-                    icon: "Wheat",
-                    val: "10,000 ha",
-                    sub: "Own farmland",
-                    desc: "Full control over raw materials",
-                  },
-                  {
-                    icon: "ShieldCheck",
-                    val: "Consistent",
-                    sub: "Quality",
-                    desc: "Strict standards and laboratory control",
-                  },
-                  {
-                    icon: "Globe",
-                    val: "Export",
-                    sub: "Experience",
-                    desc: "Exporting to Europe and China",
-                  },
-                  {
-                    icon: "Handshake",
-                    val: "Long-term",
-                    sub: "Cooperation",
-                    desc: "Flexible approach and personal care",
-                  },
-                ].map((s, i) => (
-                  <div key={i}>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                {
+                  icon: "Wheat",
+                  val: "10,000 + ha",
+                  title: "Own Farmland",
+                  desc: "10,000+ ha of own certified farmland — full control from field to processing.",
+                  img: "https://cdn.poehali.dev/files/9e62a3ec-bd8c-4bf7-a996-eb835bef4401.jpg",
+                },
+                {
+                  icon: "ShieldCheck",
+                  val: "Strict",
+                  title: "Quality Control",
+                  desc: "In-house lab testing at every stage to meet international standards.",
+                  img: "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg",
+                },
+                {
+                  icon: "Tag",
+                  val: "Ready",
+                  title: "Private Label",
+                  desc: "Retail-ready packaging with custom design for your brand.",
+                  img: "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg",
+                },
+                {
+                  icon: "FileText",
+                  val: "Full",
+                  title: "Export Docs",
+                  desc: "Phytosanitary certificates, international experience with global markets.",
+                  img: "https://cdn.poehali.dev/files/6ebe549e-c65d-458a-9a25-7388c52a2e06.jpg",
+                },
+              ].map((c, i) => (
+                <div
+                  key={i}
+                  style={{
+                    background: "#fff",
+                    border: "1px solid rgba(0,0,0,0.07)",
+                    borderRadius: 10,
+                    overflow: "hidden",
+                  }}
+                >
+                  <div style={{ height: 130, overflow: "hidden" }}>
+                    <img
+                      src={c.img}
+                      alt={c.title}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                        transition: "transform 0.5s ease",
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.transform = "scale(1.06)")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.transform = "scale(1)")
+                      }
+                    />
+                  </div>
+                  <div style={{ padding: "16px 16px 18px" }}>
                     <div
                       style={{
-                        fontFamily: "Cormorant Garamond, serif",
-                        fontSize: 18,
-                        fontWeight: 600,
-                        color: "var(--gf-gold)",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 8,
+                        marginBottom: 6,
                       }}
                     >
-                      {s.val}
+                      <Icon
+                        name={c.icon}
+                        size={15}
+                        style={{ color: "var(--gf-gold)", flexShrink: 0 }}
+                      />
+                      <div
+                        style={{
+                          fontFamily: "Montserrat",
+                          fontWeight: 700,
+                          fontSize: 11,
+                          textTransform: "uppercase",
+                          letterSpacing: "0.06em",
+                          color: "var(--gf-dark)",
+                        }}
+                      >
+                        {c.title}
+                      </div>
                     </div>
                     <div
                       style={{
                         fontFamily: "Montserrat",
-                        fontSize: 10,
-                        fontWeight: 700,
-                        textTransform: "uppercase",
-                        color: "rgba(255,255,255,0.6)",
-                        marginBottom: 1,
+                        fontSize: 11,
+                        color: "var(--gf-text-light)",
+                        lineHeight: 1.5,
                       }}
                     >
-                      {s.sub}
-                    </div>
-                    <div
-                      style={{
-                        fontFamily: "Montserrat",
-                        fontSize: 10,
-                        color: "rgba(255,255,255,0.4)",
-                        lineHeight: 1.3,
-                      }}
-                    >
-                      {s.desc}
+                      {c.desc}
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-
-            {/* 4 photos */}
-            {[
-              "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg", // own fields — 10,000 ha
-              "https://cdn.poehali.dev/files/e43ef89f-fe22-4c5d-9966-3f78245a4cee.jpg", // packaging machine — quality
-              "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", // KAMAZ — export experience
-              "https://cdn.poehali.dev/files/98d43280-321a-4078-bb4e-2cd8a7e71f5e.jpg", // packed pallets — long-term
-            ].map((img, i) => (
-              <div key={i} style={{ overflow: "hidden", minHeight: 260 }}>
-                <img
-                  src={img}
-                  alt=""
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                    transition: "transform 0.5s ease",
-                  }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.transform = "scale(1.06)")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.transform = "scale(1)")
-                  }
-                />
-              </div>
-            ))}
           </div>
 
           {/* ── Row 4: Bottom CTA ── */}
@@ -3824,7 +4048,7 @@ export default function Index() {
                       marginBottom: 2,
                     }}
                   >
-                    Let's create something great together
+                    Get Product Specifications & Pricing
                   </div>
                   <div
                     style={{
@@ -3856,9 +4080,7 @@ export default function Index() {
                     color: "var(--gf-text-light)",
                     textAlign: "right",
                   }}
-                >
-                  info@gavrilovfoods.com &nbsp;•&nbsp; www.gavrilovfoods.com
-                </div>
+                >gavrilovfoods.export@gmail.com  •  gavrilovfarm.ru</div>
               </div>
             </div>
           </div>
@@ -3953,7 +4175,7 @@ export default function Index() {
               }}
             >
               {[
-                { icon: "Wheat", val: "10,000 ha", label: "Own Farmland" },
+                { icon: "Wheat", val: "10,000 + ha", label: "Own Farmland" },
                 {
                   icon: "Warehouse",
                   val: "5,000 m²",
@@ -4146,11 +4368,11 @@ export default function Index() {
               }}
             >
               {[
-                "https://cdn.poehali.dev/files/4b5a57a3-7cdf-406e-8457-7140c7ed102e.jpg", // buckwheat field
-                "https://cdn.poehali.dev/files/155c8c27-6d57-4864-911f-cac81473d289.jpg", // buckwheat field 2
+                "https://cdn.poehali.dev/files/f587c14f-6edc-4915-9546-56750cc65d65.jpg", // buckwheat field
+                "https://cdn.poehali.dev/files/4e59b4e6-7b82-41a5-aa17-1e88022f4ea5.jpg", // green field
                 "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg", // John Deere
                 "https://cdn.poehali.dev/files/f11386c9-4001-4940-9b3c-a7cd36827549.jpg", // big bags
-                "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", // KAMAZ
+                "https://cdn.poehali.dev/files/0f193f1f-14c9-4f20-a6fb-9416edc6ee23.jpg", // truck with big bags
               ].map((src, i) => (
                 <div key={i} style={{ borderRadius: 6, overflow: "hidden" }}>
                   <img
@@ -4215,115 +4437,30 @@ export default function Index() {
             </div>
           </div>
 
-          {/* ── Row 3: Dark trust block + 4 wide photos ── */}
+          {/* ── Row 3: Why Buyers Trust — full-width dark panel ── */}
           <div
             className="reveal"
             style={{
-              display: "grid",
-              gridTemplateColumns: "320px 1fr 1fr 1fr 1fr",
-              gap: 4,
+              background: "var(--gf-dark)",
               borderRadius: 10,
-              overflow: "hidden",
-              minHeight: 220,
+              padding: "32px 36px",
             }}
           >
-            {/* Dark left: Why Buyers Trust */}
-            <div
-              style={{
-                background: "var(--gf-dark)",
-                padding: "28px 24px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-              }}
-            >
-              <div>
-                <h3
-                  style={{
-                    fontFamily: "Cormorant Garamond, serif",
-                    fontSize: 22,
-                    fontWeight: 400,
-                    color: "#fff",
-                    marginBottom: 16,
-                  }}
-                >
-                  Why Buyers Trust Gavrilov Foods
-                </h3>
-                <div
-                  style={{ display: "flex", flexDirection: "column", gap: 10 }}
-                >
-                  {[
-                    {
-                      icon: "Wheat",
-                      title: "Own Farmland",
-                      desc: "Full control from seed to Harvest",
-                    },
-                    {
-                      icon: "ShieldCheck",
-                      title: "Quality & Safety",
-                      desc: "Modern equipment and strict quality control.",
-                    },
-                    {
-                      icon: "ScanLine",
-                      title: "Full Traceability",
-                      desc: "Transparent and traceable supply chain.",
-                    },
-                    {
-                      icon: "Globe",
-                      title: "Export Experience",
-                      desc: "Reliable export packaging and logistics.",
-                    },
-                    {
-                      icon: "Leaf",
-                      title: "EU Organic Available",
-                      desc: "Certified organic products for global markets.",
-                    },
-                  ].map((t, i) => (
-                    <div
-                      key={i}
-                      style={{
-                        display: "flex",
-                        alignItems: "flex-start",
-                        gap: 8,
-                      }}
-                    >
-                      <Icon
-                        name={t.icon}
-                        size={13}
-                        style={{
-                          color: "var(--gf-gold)",
-                          marginTop: 2,
-                          flexShrink: 0,
-                        }}
-                      />
-                      <div>
-                        <span
-                          style={{
-                            fontFamily: "Montserrat",
-                            fontSize: 10,
-                            fontWeight: 700,
-                            color: "rgba(255,255,255,0.7)",
-                          }}
-                        >
-                          {t.title}{" "}
-                        </span>
-                        <span
-                          style={{
-                            fontFamily: "Montserrat",
-                            fontSize: 10,
-                            color: "rgba(255,255,255,0.35)",
-                          }}
-                        >
-                          {t.desc}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-6">
+              <h3
+                style={{
+                  fontFamily: "Cormorant Garamond, serif",
+                  fontSize: "clamp(22px, 2.5vw, 30px)",
+                  fontWeight: 400,
+                  color: "#fff",
+                  margin: 0,
+                }}
+              >
+                Why Buyers Trust Gavrilov Foods
+              </h3>
               <button
                 className="btn-gold"
-                style={{ marginTop: 16, fontSize: 11, padding: "10px 16px" }}
+                style={{ fontSize: 11, padding: "10px 20px", flexShrink: 0 }}
                 onClick={() =>
                   document
                     .querySelector("#contact")
@@ -4333,34 +4470,78 @@ export default function Index() {
                 Request a Quote <Icon name="ArrowRight" size={13} />
               </button>
             </div>
-
-            {/* 4 wide photos */}
-            {[
-              "https://cdn.poehali.dev/files/51ae26bd-c7fe-480a-9f36-813ad383270f.jpg", // Kirovets tractor + truck
-              "https://cdn.poehali.dev/files/8d03071c-03b0-44e5-a0b2-f9c3e6caf88e.jpg", // owner with Kirovets
-              "https://cdn.poehali.dev/files/adfab279-52dd-4dc8-beb1-1d55cb2b0a2f.jpg", // sowing machine
-              "https://cdn.poehali.dev/files/3efd98e0-a84f-449a-aebd-9379d7fa092e.jpg", // BTZ tractor
-            ].map((src, i) => (
-              <div key={i} style={{ overflow: "hidden" }}>
-                <img
-                  src={src}
-                  alt=""
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              {[
+                {
+                  icon: "Wheat",
+                  title: "Own Farmland",
+                  desc: "10,000+ ha — full control from seed to harvest",
+                },
+                {
+                  icon: "ShieldCheck",
+                  title: "Quality Control",
+                  desc: "In-house lab testing at every stage",
+                },
+                {
+                  icon: "ScanLine",
+                  title: "Full Traceability",
+                  desc: "Transparent, field-to-shipment supply chain",
+                },
+                {
+                  icon: "Leaf",
+                  title: "EU Organic Certified",
+                  desc: "Certified organic products for selected categories",
+                },
+                {
+                  icon: "Globe",
+                  title: "Export Experience",
+                  desc: "International markets, phytosanitary docs, FCL",
+                },
+              ].map((t, i) => (
+                <div
+                  key={i}
                   style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                    transition: "transform 0.5s ease",
+                    background: "rgba(255,255,255,0.05)",
+                    borderRadius: 8,
+                    padding: "16px 14px",
+                    border: "1px solid rgba(255,255,255,0.08)",
                   }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.transform = "scale(1.06)")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.transform = "scale(1)")
-                  }
-                />
-              </div>
-            ))}
+                >
+                  <Icon
+                    name={t.icon}
+                    size={18}
+                    style={{
+                      color: "var(--gf-gold)",
+                      marginBottom: 8,
+                      strokeWidth: 1.3,
+                    }}
+                  />
+                  <div
+                    style={{
+                      fontFamily: "Montserrat",
+                      fontSize: 10,
+                      fontWeight: 700,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.06em",
+                      color: "rgba(255,255,255,0.75)",
+                      marginBottom: 4,
+                    }}
+                  >
+                    {t.title}
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: "Montserrat",
+                      fontSize: 10,
+                      color: "rgba(255,255,255,0.4)",
+                      lineHeight: 1.4,
+                    }}
+                  >
+                    {t.desc}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* ── Row 4: Bottom trust strip ── */}
@@ -4376,29 +4557,29 @@ export default function Index() {
           >
             {[
               {
-                icon: "ShieldCheck",
-                title: "Reliable Supply",
-                desc: "Stable volumes and on-time delivery.",
-              },
-              {
-                icon: "Award",
-                title: "Certified Quality",
-                desc: "EU Organic certification available.",
+                icon: "Wheat",
+                title: "MOQ from 1 MT",
+                desc: "Flexible minimum order for any market.",
               },
               {
                 icon: "Package",
-                title: "Flexible Solutions",
-                desc: "Custom packaging for your brand.",
+                title: "Private Label Ready",
+                desc: "Custom packaging 250g – 1,000 kg big bags.",
               },
               {
-                icon: "Globe",
-                title: "Global Standards",
-                desc: "We meet international food safety standards.",
+                icon: "Leaf",
+                title: "EU Organic Certified",
+                desc: "Certified organic for selected product categories.",
               },
               {
-                icon: "Handshake",
-                title: "Long-term Partnership",
-                desc: "Built on trust, quality and transparency.",
+                icon: "FileText",
+                title: "Export Docs",
+                desc: "Phytosanitary, lab tests, certificates of origin.",
+              },
+              {
+                icon: "Tractor",
+                title: "Own Farmland",
+                desc: "10,000+ ha — direct producer, no middlemen.",
               },
             ].map((t, i) => (
               <div
@@ -4557,13 +4738,13 @@ export default function Index() {
               },
               {
                 icon: "MapPin",
-                label: "Location",
-                value: "Smolensk Region, Russia",
-                sub: "EU export documentation available",
+                label: "Origin",
+                value: "Russia | EU Export Ready",
+                sub: "Phytosanitary & export documentation available",
               },
               {
                 icon: "Globe",
-                label: "Export Markets",
+                label: "Current Export Markets",
                 value: null,
                 sub: null,
                 markets: true,
@@ -5215,7 +5396,7 @@ export default function Index() {
             "https://cdn.poehali.dev/files/943c789b-d4ed-418a-a36d-f3c15e7272ea.jpg", // owner in field
             "https://cdn.poehali.dev/files/3bb96d82-4e91-49da-a437-a8e84c943f7e.jpg", // John Deere
             "https://cdn.poehali.dev/files/de1e27a0-f677-4f7c-b4f6-f54a3d8c5abc.jpg", // big bags
-            "https://cdn.poehali.dev/files/431dd6c0-d618-4737-aaca-53e45662be51.jpg", // KAMAZ
+            "https://cdn.poehali.dev/files/67bac509-ee17-498f-b58e-8f09c4af0a50.jpg", // truck with big bags
           ].map((src, i) => (
             <div key={i} style={{ overflow: "hidden" }}>
               <img
